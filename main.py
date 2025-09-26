@@ -10,13 +10,14 @@ screen.tracer(0)
 
 player = Player()
 car = CarManager()
+level = Scoreboard()
 screen.listen()
 screen.onkey(player.move_up, 'Up')
 screen.onkey(player.move_down, 'Down')
 
 game_is_on = True
 while game_is_on:
-  time.sleep(0.1)
+  time.sleep(level.level_speed)
   screen.update()
 
   car.create_car()
@@ -32,5 +33,6 @@ while game_is_on:
   #Detect win
   if player.has_crossed():
     player.move_start_position()
+    level.increase_level()
 
 screen.mainloop()
