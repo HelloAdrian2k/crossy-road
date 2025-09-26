@@ -17,7 +17,7 @@ class Player(Turtle):
         self.forward(MOVE_DISTANCE)
 
     def move_down(self):
-        self.forward(-MOVE_DISTANCE)
+        self.backward(MOVE_DISTANCE)
     
     def has_crossed(self):
         return self.ycor() >= FINISH_LINE_Y
