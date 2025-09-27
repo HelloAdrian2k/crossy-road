@@ -28,7 +28,7 @@ while game_is_on:
     if car_object.distance(player) < 19.5:
       print(car_object.distance(player))
       game_is_on = False
-      screen.write('game over', align='center', font=('Courier', 40, 'normal'))
+      level.game_over()
     
   #Detect win
   if player.has_crossed():
